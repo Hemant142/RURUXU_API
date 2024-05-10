@@ -1,11 +1,10 @@
+// blacklist.js
 const mongoose = require("mongoose");
 
 const blacklistSchema = mongoose.Schema({
-    blacklist: { type: [String] }
+    blacklist: { type: [String], required: true }
 });
 
-const BlacklistModel = mongoose.model("Blacklist", blacklistSchema); // Updated model name
+const BlacklistModel = mongoose.model("Blacklist", blacklistSchema); 
 
-module.exports = {
-    BlacklistModel
-};
+module.exports = BlacklistModel;
